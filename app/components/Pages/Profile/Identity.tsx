@@ -1,9 +1,10 @@
-import Box from "../Box";
-import Input from "../Input";
+import Box from "@/components/Box";
+import Input from "@/components/Input";
+import PageLayout from "../Layout";
 
 export default function Identity() {
   return (
-    <div className="flex gap-4 items-start flex-wrap">
+    <PageLayout>
       <Box>
         <div className="pt-4 flex flex-col gap-4 w-40 items-center">
           <div className="flex justify-center items-center bg-gray-300 w-28 h-28 rounded-full cursor-pointer"></div>
@@ -25,6 +26,6 @@ export default function Identity() {
           <div>Blockchain ID</div>
         </div>
       </Box>
-    </div>
+    </PageLayout>
   );
 }

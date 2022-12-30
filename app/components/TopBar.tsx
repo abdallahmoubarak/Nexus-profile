@@ -1,7 +1,10 @@
 import Image from "next/image";
+import Link from "next/link";
+import { useRouter } from "next/router";
 import Input from "./Input";
 
 export default function TopBar() {
+  const router = useRouter();
   return (
     <div className="p-3 flex items-center w-screen justify-between">
       <div className="flex gap-5">
@@ -35,8 +38,11 @@ export default function TopBar() {
           alt={""}
           width={20}
           height={20}
+          onClick={() => router.push("/")}
         />
-        <div className="flex justify-center items-center bg-gray-300 w-9 h-9 rounded-full cursor-pointer"></div>
+        <div
+          className="flex justify-center items-center bg-gray-300 w-9 h-9 rounded-full cursor-pointer"
+          onClick={() => router.push("/profile")}></div>
       </div>
     </div>
   );
