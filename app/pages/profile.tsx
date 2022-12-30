@@ -1,7 +1,6 @@
 import ProfileMenu from "@/components/Pages/Menu/ProfileMenu";
 import Identity from "@/components/Pages/Profile/Identity";
 import Security from "@/components/Pages/Profile/Security";
-import ShadowBox from "@/components/ShadowBox";
 import TopBar from "@/components/TopBar";
 import Head from "next/head";
 import { useState } from "react";
@@ -18,9 +17,7 @@ export default function ProfilePage() {
       </Head>
       <TopBar />
       <div className="p-4 flex items-start gap-4">
-        <ShadowBox>
-          <ProfileMenu setPage={setPage} />
-        </ShadowBox>
+        <ProfileMenu setPage={setPage} />
         {page === "Identity" && <Identity />}
         {page === "Security" && <Security />}
       </div>

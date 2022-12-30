@@ -1,5 +1,6 @@
 import Box from "@/components/Box";
 import Input from "@/components/Input";
+import Image from "next/image";
 import PageLayout from "../Layout";
 
 export default function Identity() {
@@ -7,7 +8,9 @@ export default function Identity() {
     <PageLayout>
       <Box>
         <div className="pt-4 flex flex-col gap-4 w-40 items-center">
-          <div className="flex justify-center items-center bg-gray-300 w-28 h-28 rounded-full cursor-pointer"></div>
+          <div className="flex justify-center items-center bg-gray-300 w-28 h-28 rounded-full cursor-pointer">
+            <Image src={"/SP2.png"} alt={""} width={280} height={280} />
+          </div>
           <div>Profile Picture</div>
         </div>
       </Box>

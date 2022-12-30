@@ -1,6 +1,5 @@
 import Head from "next/head";
 import TopBar from "@/components/TopBar";
-import ShadowBox from "@/components/ShadowBox";
 import { useState } from "react";
 import WalletMenu from "@/components/Pages/Menu/WalletMenu";
 
@@ -16,9 +15,8 @@ export default function Home() {
       </Head>
       <TopBar />
       <div className="p-4 flex items-start gap-4">
-        <ShadowBox>
-          <WalletMenu setPage={setPage} />
-        </ShadowBox>
+        <WalletMenu setPage={setPage} />
+
         {page === "Wallet" && <div>Wallet</div>}
         {page === "Transactions" && <div>Transactions</div>}
         {page === "Subscriptions" && <div>Subscriptions</div>}
