@@ -13,6 +13,7 @@ export default function TopBar() {
           alt={""}
           width={30}
           height={30}
+          onClick={() => router.push("/market")}
         />
         <Image
           className="cursor-pointer"
@@ -21,13 +22,14 @@ export default function TopBar() {
           width={18}
           height={18}
         />
-        <Input placeholder="Flower" />
+        <Input placeholder="Search" value="Flower" />
         <Image
           className="cursor-pointer -translate-x-12"
           src="/svg/search-icon.svg"
           alt={""}
           width={20}
           height={20}
+          onClick={() => router.push("/search")}
         />
       </div>
       <div className="flex gap-4">

@@ -1,7 +1,10 @@
+import Input from "@/components/Input";
 import Head from "next/head";
 import Image from "next/image";
+import { useRouter } from "next/router";
 
 export default function MarketPage() {
+  const router = useRouter();
   return (
     <>
       <Head>
@@ -24,8 +27,19 @@ export default function MarketPage() {
           className="cursor-pointer "
           src="/LogoTypography.png"
           alt={""}
-          width={300}
+          width={250}
           height={50}
+        />
+      </div>
+      <div className="flex gap-5 justify-center align-center w-screen pt-10">
+        <Input placeholder="Search" value="Flower" />
+        <Image
+          className="cursor-pointer -translate-x-12"
+          src="/svg/search-icon.svg"
+          alt={""}
+          width={20}
+          height={20}
+          onClick={() => router.push("/search")}
         />
       </div>
     </>
