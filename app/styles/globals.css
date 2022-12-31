@@ -13,7 +13,6 @@
   overscroll-behavior: contain;
   -ms-overflow-style: none;
   scrollbar-width: none;
-  font-family: "Nunito";
   scroll-behavior: smooth;
 }
 *::-webkit-scrollbar {

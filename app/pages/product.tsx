@@ -1,4 +1,5 @@
 import ProductDetails from "@/components/ProductDetails";
+import ProductsGrid from "@/components/ProductsGrid";
 import TopBar from "@/components/TopBar";
 import Head from "next/head";
 
@@ -12,8 +13,11 @@ export default function ProductPage() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <TopBar />
-      <div className="p-4">
-        <ProductDetails />
+      <div className="p-4 w-screen">
+        <div className="flex">
+          <ProductsGrid hasOptions={true} />
+          <ProductDetails />
+        </div>
       </div>
     </div>
   );
