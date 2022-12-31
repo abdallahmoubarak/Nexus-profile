@@ -1,4 +1,5 @@
 import SearchMenu from "@/components/Pages/Menu/SearchMenu";
+import MyAds from "@/components/Pages/Search/MyAds";
 import TopBar from "@/components/TopBar";
 import Head from "next/head";
 import { useState } from "react";
@@ -16,7 +17,7 @@ export default function SearchPage() {
       <TopBar />
       <div className="p-4 flex items-start gap-4">
         <SearchMenu setPage={setPage} />
-        {page === "My Ads" && <div>My Ads</div>}
+        {page === "My Ads" && <MyAds />}
         {page === "My Spaces" && <div>My Spaces</div>}
         {page === "Space Marketplace" && <div>Space Marketplace</div>}
       </div>
