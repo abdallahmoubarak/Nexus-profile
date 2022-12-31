@@ -14,7 +14,7 @@ export default function ProductPage() {
       </Head>
       <TopBar />
       <div className="p-4 w-screen">
-        <div className="flex">
+        <div className="flex items-start">
           <ProductsGrid hasOptions={true} />
           <ProductDetails />
         </div>

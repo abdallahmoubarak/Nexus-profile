@@ -1,9 +1,12 @@
 import Image from "next/image";
+import { useRouter } from "next/router";
 import { IoIosArrowBack, IoIosArrowForward, IoIosClose } from "react-icons/io";
+
 export default function ProductDetails() {
+  const router = useRouter();
   return (
     <div className="flex-auto w-[30rem] rounded-lg border border-gray-200 text-center min-w-[30rem]">
-      <div className="flex align-center justify-between px-4 py-2">
+      <div className="flex align-center justify-between px-2 py-2">
         <div>Unlimitron</div>
         <div className="flex gap-2 align-center">
           <div>. . .</div>
@@ -13,12 +16,14 @@ export default function ProductDetails() {
           <div className="cursor-pointer">
             <IoIosArrowForward />
           </div>
-          <div className="text-lg cursor-pointer">
+          <div
+            className="text-lg cursor-pointer"
+            onClick={() => router.push("/market")}>
             <IoIosClose />
           </div>
         </div>
       </div>
-      <div className="flex justify-center align-center border-gray-200 border-t border-b p-4">
+      <div className="flex justify-center align-center border-gray-200 border-t border-b py-6">
         <Image src="/mobile.png" alt="" width={300} height={300} />
       </div>
       <div className="flex justify-between items-center p-1">
